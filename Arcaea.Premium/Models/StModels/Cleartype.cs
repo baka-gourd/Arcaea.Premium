@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace TempTests.Models.StModels;
+namespace Arcaea.Premium.Models.StModels;
 
 public partial class Cleartype
 {

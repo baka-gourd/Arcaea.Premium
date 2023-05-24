@@ -97,6 +97,15 @@ namespace Arcaea.Premium.Resources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Import song data from wiki.
+        /// </summary>
+        internal static string Import_DownloadSongData {
+            get {
+                return ResourceManager.GetString("Import.DownloadSongData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Log.
         /// </summary>
         internal static string Import_Log {

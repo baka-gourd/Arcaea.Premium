@@ -129,6 +129,9 @@
   <data name="Import.Desc1" xml:space="preserve">
     <value>Import from st3 file</value>
   </data>
+  <data name="Import.DownloadSongData" xml:space="preserve">
+    <value>Import song data from wiki</value>
+  </data>
   <data name="Import.Log" xml:space="preserve">
     <value>Log</value>
   </data>

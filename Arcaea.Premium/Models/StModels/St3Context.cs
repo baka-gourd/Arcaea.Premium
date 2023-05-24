@@ -1,9 +1,7 @@
 ﻿#nullable disable
-using System;
-using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace TempTests.Models.StModels;
+namespace Arcaea.Premium.Models.StModels;
 
 public partial class St3Context : DbContext
 {

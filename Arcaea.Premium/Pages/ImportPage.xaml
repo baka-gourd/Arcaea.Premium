@@ -24,6 +24,12 @@
             FontSize="16"
             VerticalOptions="Center"
             HorizontalOptions="{OnPlatform Center,Android=Center,iOS=Center,WinUI=Start}"/>
+        <Button
+            Text="{x:Static localization:AppResource.Import_DownloadSongData}"
+            FontSize="16"
+            VerticalOptions="Center"
+            HorizontalOptions="{OnPlatform Center,Android=Center,iOS=Center,WinUI=Start}"
+            Command="{Binding DownloadSongDataCommand}"/>
         <Label
             Text="{x:Static localization:AppResource.Import_Log}"
             FontSize="24"/>

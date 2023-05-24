@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace TempTests.Models.StModels;
+﻿namespace Arcaea.Premium.Models.StModels;
 
 public partial class Purchaseentry
 {

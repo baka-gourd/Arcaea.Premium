@@ -129,6 +129,9 @@
   <data name="Import.Desc1" xml:space="preserve">
     <value>从st3文件导入</value>
   </data>
+  <data name="Import.DownloadSongData" xml:space="preserve">
+    <value>从wiki获取歌曲信息</value>
+  </data>
   <data name="Import.Log" xml:space="preserve">
     <value>日志</value>
   </data>
