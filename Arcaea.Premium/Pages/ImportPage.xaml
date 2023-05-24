@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:localization="clr-namespace:Arcaea.Premium.Resources.Localization"
+             xmlns:local="clr-namespace:Arcaea.Premium.Pages"
+             x:Class="Arcaea.Premium.Pages.ImportPage"
+             Title="{x:Static localization:AppResource.ImportPageName}">
+    <ContentPage.BindingContext>
+        <local:ImportPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout
+        Spacing="25"
+        Padding="30,0">
+        <Button
+            Margin="0,25,0,0"
+            Text="{Binding St3ButtonText,FallbackValue=St3}"
+            FontSize="16"
+            VerticalOptions="Center"
+            HorizontalOptions="{OnPlatform Center,Android=Center,iOS=Center,WinUI=Start}"
+            Command="{Binding St3Command}"/>
+        <Button
+            Text="root"
+            FontSize="16"
+            VerticalOptions="Center"
+            HorizontalOptions="{OnPlatform Center,Android=Center,iOS=Center,WinUI=Start}"/>
+        <Label
+            Text="{x:Static localization:AppResource.Import_Log}"
+            FontSize="24"/>
+        <Label
+            IsVisible="{Binding IsLogVisible}"
+            Text="{Binding LogText}"
+            FontSize="16"
+            MaxLines="25"></Label>
+    </VerticalStackLayout>
+</ContentPage>
