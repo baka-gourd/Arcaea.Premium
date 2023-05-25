@@ -7,8 +7,8 @@ public class Ptt
     public static double CalcBest30()
     {
         var app = DataBase.AppDataBase;
-        var scores = app.Scores.OrderByDescending(x=>x.Score1).ToList();
-        scores = scores.Count > 30 ? scores.Take(30).ToList() : scores;
+        var scores = app.Scores.ToList();
+        var ptts = new List<double>();
         double total = 0;
         foreach (var score in scores)
         {
@@ -20,11 +20,13 @@ public class Ptt
                 .Where(x => x.Id == id).ToList();
             if (filter.Count > 0)
             {
-                total += CalcSongPtt(Convert.ToInt32(s), filter[0].ConstantValueTuples[Convert.ToInt32(diff)].Constant);
+                ptts.Add(CalcSongPtt(Convert.ToInt32(s), filter[0].ConstantValueTuples[Convert.ToInt32(diff)].Constant));
             }
         }
+
+        total = ptts.OrderByDescending(x => x).Take(30).Concat(ptts.OrderByDescending(x => x).Take(10)).Sum();
         
-        return total / 30;
+        return total / 40;
     }
 
     public static double CalcSongPtt(long score, double constant)
@@ -36,11 +38,11 @@ public class Ptt
         }
         else if (score >= 9800000)
         {
-            targetPtt = constant + 1.0f + (score - 9800000.0f) / 200000.0f;
+            targetPtt = constant + 1.0f + (double)(score - 9800000) / 200000;
         }
         else if (score > 0)
         {
-            targetPtt = constant + (score - 9500000.0f) / 300000.0f;
+            targetPtt = constant + (double)(score - 9500000) / 300000;
         }
         else
         {
