@@ -5,24 +5,36 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:pages="clr-namespace:Arcaea.Premium.Pages"
     xmlns:localization="clr-namespace:Arcaea.Premium.Resources.Localization"
-    Shell.FlyoutBehavior="Disabled"
+    FlyoutBehavior="Disabled"
     Title="Arcaea.Premium">
 
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
         <ShellContent
-                Title="{x:Static localization:AppResource.MainPageName}"
-                ContentTemplate="{DataTemplate pages:MainPage}"
-                Route="MainPage" />
+            FlyoutIcon="ph_house.png"
+            Icon="ph_house.png"
+            Title="{x:Static localization:AppResource.MainPageName}"
+            ContentTemplate="{DataTemplate pages:MainPage}"
+            Route="MainPage" />
 
         <ShellContent
-                Title="{x:Static localization:AppResource.ImportPageName}"
-                ContentTemplate="{DataTemplate pages:ImportPage}"
-                Route="ImportPage" />
+            FlyoutIcon="ph_download.png"
+            Icon="ph_download.png"
+            Title="{x:Static localization:AppResource.ImportPageName}"
+            ContentTemplate="{DataTemplate pages:ImportPage}"
+            Route="ImportPage" />
 
         <ShellContent
-                Title="{x:Static localization:AppResource.AboutPageName}"
-                ContentTemplate="{DataTemplate pages:AboutPage}"
-                Route="AboutPage" />
+            FlyoutIcon="ph_file.png"
+            Icon="ph_file.png"
+            Title="{x:Static localization:AppResource.ScoreViewPage}"
+            ContentTemplate="{DataTemplate pages:ScoreViewPage}"
+            Route="ScoreViewPage" />
 
+        <ShellContent
+            FlyoutIcon="ph_info.png"
+            Icon="ph_info.png"
+            Title="{x:Static localization:AppResource.AboutPageName}"
+            ContentTemplate="{DataTemplate pages:AboutPage}"
+            Route="AboutPage" />
     </FlyoutItem>
 </Shell>

@@ -9,7 +9,16 @@ public class DataBase
 
     public static AppDataContext AppDataBase
     {
-        get { return _appData ??= new AppDataContext(); }
+        get
+        {
+            if (_appData is null)
+            {
+                _appData = new AppDataContext();
+            }
+
+            _appData.Database.EnsureCreated();
+            return _appData;
+        }
     }
 
     private static St3Context? _st3Data;

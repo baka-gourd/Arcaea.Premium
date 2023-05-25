@@ -131,5 +131,14 @@ namespace Arcaea.Premium.Resources.Localization {
                 return ResourceManager.GetString("MainPageName", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scores.
+        /// </summary>
+        internal static string ScoreViewPage {
+            get {
+                return ResourceManager.GetString("ScoreViewPage", resourceCulture);
+            }
+        }
     }
 }

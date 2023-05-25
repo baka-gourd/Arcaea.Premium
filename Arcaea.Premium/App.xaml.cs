@@ -1,12 +1,11 @@
-﻿namespace Arcaea.Premium
-{
-    public partial class App : Application
-    {
-        public App()
-        {
-            InitializeComponent();
+﻿namespace Arcaea.Premium;
 
-            MainPage = new AppShell();
-        }
+public partial class App : Application
+{
+    public App()
+    {
+        InitializeComponent();
+        Cache.InitCache();
+        MainPage = new AppShell();
     }
 }

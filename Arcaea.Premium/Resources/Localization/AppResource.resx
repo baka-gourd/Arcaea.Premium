@@ -141,4 +141,7 @@
   <data name="MainPageName" xml:space="preserve">
     <value>Home</value>
   </data>
+  <data name="ScoreViewPage" xml:space="preserve">
+    <value>Scores</value>
+  </data>
 </root>
